@@ -1,3 +1,7 @@
+package com.practicum.java_kanban.model;
+
+import com.practicum.java_kanban.status.Status;
+
 import java.util.Objects;
 
 public class Task {
@@ -67,6 +71,4 @@ public class Task {
                 ", status=" + status +
                 '}';
     }
-
-
 }

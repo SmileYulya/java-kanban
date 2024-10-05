@@ -1,7 +1,10 @@
-import java.util.ArrayList;
-import java.util.Objects;
+package com.practicum.java_kanban.model;
 
-public class Epic extends Task{
+import com.practicum.java_kanban.status.Status;
+
+import java.util.ArrayList;
+
+public class Epic extends Task {
     private final ArrayList<Integer> subtaskIds = new ArrayList<>();
 
     public ArrayList<Integer> getSubtaskIds() {
