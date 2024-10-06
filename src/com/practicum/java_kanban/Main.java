@@ -4,7 +4,7 @@ import com.practicum.java_kanban.manager.TaskManager;
 import com.practicum.java_kanban.model.Epic;
 import com.practicum.java_kanban.model.Subtask;
 import com.practicum.java_kanban.model.Task;
-import com.practicum.java_kanban.status.Status;
+import com.practicum.java_kanban.model.Status;
 
 public class Main {
 
@@ -50,7 +50,6 @@ public class Main {
         System.out.println(taskManager.getAllSubtasks());
         System.out.println("-------------");
         System.out.println(taskManager.getSubtaskByEpic(4));
-
         System.out.println("-------------");
         System.out.println(taskManager.getSubtaskByEpic(5));
         System.out.println("-------------");

@@ -1,7 +1,5 @@
 package com.practicum.java_kanban.model;
 
-import com.practicum.java_kanban.status.Status;
-
 import java.util.Objects;
 
 public class Task {
@@ -15,7 +13,6 @@ public class Task {
         this.description = description;
         this.status = status;
     }
-
 
     public int getId() {
         return id;
