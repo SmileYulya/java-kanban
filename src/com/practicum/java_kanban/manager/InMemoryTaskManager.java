@@ -7,6 +7,7 @@ import com.practicum.java_kanban.model.Status;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -49,8 +50,8 @@ public class InMemoryTaskManager implements TaskManager {
 
     //обновление эпика
     @Override
-    public void updateEpic(Epic epic, int id) {
-        final Epic oldEpic = epics.get(id);
+    public void updateEpic(Epic epic) {
+        final Epic oldEpic = epics.get(epic.getId());
         oldEpic.setTitle(epic.getTitle());
         oldEpic.setDescription(epic.getDescription());
     }
@@ -59,7 +60,6 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public void updateSubTask(Subtask subtask) {
         subtasks.put(subtask.getId(), subtask);
-        epics.get(subtask.getEpicId());
         updateStatus(subtask.getEpicId());
     }
 
@@ -166,8 +166,13 @@ public class InMemoryTaskManager implements TaskManager {
         return subtasksNew;
     }
 
+    @Override
+    public List<Task> getHistory(){
+        return inMemoryHistoryManager.getHistory();
+    }
+
     //вспомогательный метод обновления статуса эпика
-    public void updateStatus(int epicId) {
+    private void updateStatus(int epicId) {
         int countDone = 0;
         int countNew = 0;
         Epic epicGetEpicId = epics.get(epicId);

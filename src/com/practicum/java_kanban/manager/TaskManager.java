@@ -4,7 +4,7 @@ import com.practicum.java_kanban.model.Epic;
 import com.practicum.java_kanban.model.Subtask;
 import com.practicum.java_kanban.model.Task;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface TaskManager {
     void addTask(Task task);
@@ -15,15 +15,15 @@ public interface TaskManager {
 
     void updateTask(Task task);
 
-    void updateEpic(Epic epic, int id);
+    void updateEpic(Epic epic);
 
     void updateSubTask(Subtask subtask);
 
-    ArrayList<Subtask> getAllSubtasks();
+    List<Subtask> getAllSubtasks();
 
-    ArrayList<Task> getAllTasks();
+    List<Task> getAllTasks();
 
-    ArrayList<Epic> getAllEpics();
+    List<Epic> getAllEpics();
 
     void deleteTaskById(int nextId);
 
@@ -43,6 +43,7 @@ public interface TaskManager {
 
     Subtask getSubtaskById(int nextId);
 
-    ArrayList<Subtask> getSubtaskByEpic(int epicId);
+    List<Subtask> getSubtaskByEpic(int epicId);
 
+    List<Task> getHistory();
 }
