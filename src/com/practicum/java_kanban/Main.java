@@ -77,7 +77,7 @@ public class Main {
 
         System.out.println("--------------------------");
         System.out.println("Список подзадач после вызова метода удаления всех подзадач:");
-        taskManager.deleteAllSubtask();
+        //taskManager.deleteAllSubtask();
         System.out.println(taskManager.getAllSubtasks());
         System.out.println("Обновление статуса эпика:");
         System.out.println(ep.getStatus());
@@ -89,7 +89,7 @@ public class Main {
         taskManager.getTaskById(2);
         taskManager.getTaskById(3);
         System.out.println("История просмотров:");
-        System.out.println(inMemoryHistoryManager.getHistory());
+        System.out.println(taskManager.getHistory());
 
 //        taskManager.deleteSubtask(6);
 //        System.out.println(taskManager.getAllEpics());
