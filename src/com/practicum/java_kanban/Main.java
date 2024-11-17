@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         TaskManager taskManager = Managers.getDefault();
-        HistoryManager inMemoryHistoryManager = Managers.getDefaultHistory();
 
         Task task1 = new Task("Прочитать книгу", "Описание 1", Status.NEW);
         taskManager.addTask(task1);
@@ -88,6 +87,8 @@ public class Main {
         taskManager.getTaskById(1);
         taskManager.getTaskById(2);
         taskManager.getTaskById(3);
+        taskManager.getTaskById(3);
+        taskManager.getEpicById(4);
         System.out.println("История просмотров:");
         System.out.println(taskManager.getHistory());
 

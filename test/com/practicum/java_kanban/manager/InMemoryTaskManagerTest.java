@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -76,17 +77,11 @@ class InMemoryTaskManagerTest {
     //задачи, добавляемые в HistoryManager, сохраняют предыдущую версию задачи и её данных
     @Test
     void testAddHistoryManager() {
-        ArrayList<Task> historyTest = new ArrayList<>();
+        List<Task> historyTest = new ArrayList<>();
 
         taskManager.addTask(task1);
         taskManager.addTask(task2);
         taskManager.addEpic(epic1);
-
-        taskManager.getTaskById(1);
-        historyTest.add(task1);
-
-        taskManager.getTaskById(1);
-        historyTest.add(task1);
 
         taskManager.getEpicById(3);
         historyTest.add(epic1);
@@ -97,6 +92,6 @@ class InMemoryTaskManagerTest {
         taskManager.getTaskById(2);
         historyTest.add(task2);
 
-        assertEquals(historyTest, inMemoryHistoryManager.getHistory());
+        assertEquals(historyTest, taskManager.getHistory());
     }
 }

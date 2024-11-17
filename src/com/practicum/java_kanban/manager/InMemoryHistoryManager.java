@@ -27,11 +27,11 @@ public class InMemoryHistoryManager implements HistoryManager {
         removeNode(historyMap.get(id));
     }
 
-    private void linkLast(Task element){
+    private void linkLast(Task task){
         final Node<Task> oldTail = tail;
-        final Node<Task> newNode = new Node<Task>(oldTail, element, null);
+        final Node<Task> newNode = new Node<>(oldTail, task, null);
         tail = newNode;
-        historyMap.put(element.getId(), newNode);
+        historyMap.put(task.getId(), newNode);
         if (oldTail == null)
             head = newNode;
         else

@@ -15,11 +15,11 @@ public class Subtask extends Task {
     @Override
     public String toString() {
         return "Subtask{" +
-                "id=" + id + '\'' +
-                ", epicId=" + epicId + '\'' +
+                "id='" + id + '\'' +
+                ", epicId='" + epicId + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", status=" + status +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
