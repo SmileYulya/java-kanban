@@ -10,7 +10,7 @@ class ManagersTest {
     @Test
     void testCreateCopyTaskManager() {
         TaskManager taskManager = Managers.getDefault();
-        Task task1 = new Task("1", "Task 1", Status.NEW);
+        Task task1 = new Task("1", "Task 1");
         task1.setTitle("2");
         taskManager.updateTask(task1);
         assertEquals("2", task1.getTitle());

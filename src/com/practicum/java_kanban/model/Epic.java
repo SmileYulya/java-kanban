@@ -10,14 +10,14 @@ public class Epic extends Task {
     }
 
     public Epic(String title, String description) {
-        super(title, description, Status.NEW);
+        super(title, description);
     }
 
     @Override
     public String toString() {
-        return "Epic{" +
-                "id='" + id + '\'' +
-                ", subtaskIds='" + subtaskIds + '\'' +
+        return "Epic {" +
+                "epicId='" + id + '\'' +
+                ", subtaskId='" + subtaskIds + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status='" + status + '\'' +

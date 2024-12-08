@@ -28,14 +28,14 @@ class InMemoryTaskManagerTest {
     void beforeEach() {
         taskManager = Managers.getDefault();
         inMemoryHistoryManager = Managers.getDefaultHistory();
-        task1 = new Task("1", "Task 1", Status.NEW);
-        task2 = new Task("2", "Task 2", Status.NEW);
+        task1 = new Task("1", "Task 1");
+        task2 = new Task("2", "Task 2");
         epic1 = new Epic("3", "Epic 1");
         epic2 = new Epic("4", "Epic 2");
-        subtask1 = new Subtask("5", "Subtask 1", Status.NEW, 3);
-        subtask2 = new Subtask("6", "Subtask 2", Status.NEW, 3);
-        subtask3 = new Subtask("7", "Subtask 3", Status.DONE, 4);
-        subtask4 = new Subtask("8", "Subtask 3", Status.DONE, 4);
+        subtask1 = new Subtask("5", "Subtask 1",  3);
+        subtask2 = new Subtask("6", "Subtask 2",  3);
+        subtask3 = new Subtask("7", "Subtask 3",  4);
+        subtask4 = new Subtask("8", "Subtask 3",  4);
     }
 
     //проверяется, что InMemoryTaskManager действительно добавляет задачи разного типа и может найти их по id

@@ -3,8 +3,9 @@ package com.practicum.java_kanban.model;
 public class Subtask extends Task {
     private final int epicId;
 
-    public Subtask(String title, String description, Status status, int epicId) {
-        super(title, description, status);
+
+    public Subtask(String title, String description, int epicId) {
+        super(title, description);
         this.epicId = epicId;
     }
 
@@ -14,7 +15,7 @@ public class Subtask extends Task {
 
     @Override
     public String toString() {
-        return "Subtask{" +
+        return "Subtask {" +
                 "id='" + id + '\'' +
                 ", epicId='" + epicId + '\'' +
                 ", title='" + title + '\'' +
@@ -22,4 +23,5 @@ public class Subtask extends Task {
                 ", status='" + status + '\'' +
                 '}';
     }
+
 }
